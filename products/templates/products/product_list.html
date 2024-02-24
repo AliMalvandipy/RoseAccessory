@@ -1,0 +1,11 @@
+<h1>Product List</h1>
+
+{% for product in products %}
+   {% comment %} <a href="{% url 'product_detail' product.id %}">
+    <h3>{{product.tittle}}</h3>
+   </a> {% endcomment %}
+   <a href="{{product.get_absolute_url}}">
+    <h3>{{product.tittle}}</h3>
+   </a>
+{% endfor %}
+    
